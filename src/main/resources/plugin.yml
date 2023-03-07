@@ -1,0 +1,8 @@
+name: InfiniteNetherrack
+version: '${project.version}'
+main: io.paper.infinitenetherrack.Heart
+api-version: 1.8.9
+commands:
+  infiniteNetherrack:
+    description: main
+
