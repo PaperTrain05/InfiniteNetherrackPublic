@@ -1,21 +1,21 @@
 package io.paper.infinitenetherrack.templates;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 
 public class AbstractConfiguration {
-    public transient Heart heart = null;
+    public transient Main main = null;
     public transient String path = "";
 
-    public Heart getHeart() {
-        return this.heart;
+    public Main getHeart() {
+        return this.main;
     }
 
     public String getPath() {
         return this.path;
     }
 
-    public void setHeart(Heart heart) {
-        this.heart = heart;
+    public void setHeart(Main main) {
+        this.main = main;
     }
 
     public void setPath(String path) {

@@ -1,7 +1,7 @@
 package io.paper.infinitenetherrack.templates;
 
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 
 import java.util.List;
 
@@ -16,13 +16,13 @@ public abstract class AbstractCommand
         TabExecutor {
     private final String command;
 
-    public AbstractCommand(Heart heart, String command) {
-        super(heart);
+    public AbstractCommand(Main main, String command) {
+        super(main);
         this.command = command;
     }
 
-    public AbstractCommand(Heart heart) {
-        super(heart);
+    public AbstractCommand(Main main) {
+        super(main);
         String name = this.getClass().getSimpleName().toLowerCase();
         this.command = name.substring(2);
     }

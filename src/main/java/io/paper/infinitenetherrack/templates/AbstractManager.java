@@ -1,9 +1,9 @@
 package io.paper.infinitenetherrack.templates;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 
 public class AbstractManager {
-    public Heart heart;
+    public Main main;
     public boolean loaded = false;
 
     public void initialize() {
@@ -12,20 +12,20 @@ public class AbstractManager {
     public void deinitialize() {
     }
 
-    public AbstractManager(Heart heart) {
-        this.heart = heart;
+    public AbstractManager(Main main) {
+        this.main = main;
     }
 
-    public Heart getHeart() {
-        return this.heart;
+    public Main getHeart() {
+        return this.main;
     }
 
     public boolean isLoaded() {
         return this.loaded;
     }
 
-    public void setHeart(Heart heart) {
-        this.heart = heart;
+    public void setHeart(Main main) {
+        this.main = main;
     }
 
     public void setLoaded(boolean loaded) {

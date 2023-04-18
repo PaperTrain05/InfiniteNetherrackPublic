@@ -1,6 +1,6 @@
 package io.paper.infinitenetherrack.config;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 import io.paper.infinitenetherrack.templates.AbstractConfiguration;
 
 import java.util.Arrays;
@@ -17,9 +17,9 @@ public class GeneralConfig
     long messageEveryXSeconds = 45L;
     boolean disablePlacingInSystemFactions = true;
 
-    public GeneralConfig(Heart heart, String path) {
+    public GeneralConfig(Main main, String path) {
         this.path = path;
-        this.heart = heart;
+        this.main = main;
     }
 
     public String getDisplayName() {

@@ -6,7 +6,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 import io.paper.infinitenetherrack.templates.AbstractConfiguration;
 import java.io.BufferedReader;
 import java.io.File;
@@ -64,13 +64,13 @@ public class ConfigUtil {
         return finalProduct.get(paths[paths.length - 1]);
     }
 
-    public static AbstractConfiguration load(AbstractConfiguration object, Heart heart) {
+    public static AbstractConfiguration load(AbstractConfiguration object, Main main) {
         String configString;
         File file;
         String path = object.getPath();
         JsonObject savedObject = ConfigUtil.getJsonObject(path);
-        if (!heart.getDataFolder().exists()) {
-            heart.getDataFolder().mkdir();
+        if (!main.getDataFolder().exists()) {
+            main.getDataFolder().mkdir();
         }
         if (!(file = new File(path)).exists()) {
             try {
@@ -82,7 +82,7 @@ public class ConfigUtil {
         try {
             if ("".equals(configString = IOUtils.toString(Files.newBufferedReader(Paths.get(path, new String[0]))))) {
                 ConfigUtil.save(object, path);
-                return ConfigUtil.load(object, heart);
+                return ConfigUtil.load(object, main);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -96,7 +96,7 @@ public class ConfigUtil {
             }
         }
         ConfigUtil.save(config, path);
-        config.setHeart(heart);
+        config.setHeart(main);
         config.setPath(path);
         System.out.println("Loaded config: " + object.getClass().getSimpleName() + " from storage.");
         return config;

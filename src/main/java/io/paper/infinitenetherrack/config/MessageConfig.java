@@ -1,6 +1,6 @@
 package io.paper.infinitenetherrack.config;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 import io.paper.infinitenetherrack.templates.AbstractConfiguration;
 
 public class MessageConfig
@@ -17,9 +17,9 @@ public class MessageConfig
     String cantFindPlayer = "&cThe player: &f{player}&c cannot be found!";
     String invalidNumber = "&cThe number &f{num} &cis invalid! Try again.";
 
-    public MessageConfig(Heart heart, String path) {
+    public MessageConfig(Main main, String path) {
         this.path = path;
-        this.heart = heart;
+        this.main = main;
     }
 
     public String getReloadUsage() {

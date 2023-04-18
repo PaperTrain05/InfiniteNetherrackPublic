@@ -1,6 +1,6 @@
 package io.paper.infinitenetherrack.commands;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 import io.paper.infinitenetherrack.config.GeneralConfig;
 import io.paper.infinitenetherrack.config.MessageConfig;
 import io.paper.infinitenetherrack.managers.MessageManager;
@@ -23,8 +23,8 @@ public class CmdInfiniteNetherrack
     GeneralConfig cnf;
     List<String> blank = new ArrayList<String>();
 
-    public CmdInfiniteNetherrack(Heart heart, String command) {
-        super(heart, command);
+    public CmdInfiniteNetherrack(Main main, String command) {
+        super(main, command);
     }
 
     @Override

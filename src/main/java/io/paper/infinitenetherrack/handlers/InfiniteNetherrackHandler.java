@@ -1,6 +1,6 @@
 package io.paper.infinitenetherrack.handlers;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 import io.paper.infinitenetherrack.config.GeneralConfig;
 import io.paper.infinitenetherrack.config.MessageConfig;
 import io.paper.infinitenetherrack.hooks.MCoreFactionsHook;
@@ -39,8 +39,8 @@ public class InfiniteNetherrackHandler
         toRemove.forEach(messageObj -> this.messageObjList.remove(messageObj));
     };
 
-    public InfiniteNetherrackHandler(Heart heart) {
-        super(heart);
+    public InfiniteNetherrackHandler(Main main) {
+        super(main);
     }
 
     @Override

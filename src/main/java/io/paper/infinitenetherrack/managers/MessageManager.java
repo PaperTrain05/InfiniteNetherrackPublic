@@ -1,6 +1,6 @@
 package io.paper.infinitenetherrack.managers;
 
-import io.paper.infinitenetherrack.Heart;
+import io.paper.infinitenetherrack.Main;
 import io.paper.infinitenetherrack.templates.AbstractManager;
 import java.util.Collection;
 import java.util.UUID;
@@ -12,8 +12,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class MessageManager extends AbstractManager {
-    public MessageManager(Heart heart) {
-        super(heart);
+    public MessageManager(Main main) {
+        super(main);
     }
 
     public String color(String s) {
